@@ -1,0 +1,51 @@
+:root {
+    font-size: 12px;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-----------Gestion flex------deb---*/
+
+.flex {
+    display: flex;
+}
+
+.flexdc {
+    flex-direction: column;
+}
+
+.flexac {
+    align-items: center;
+}
+
+.flexspe {
+    justify-content: space-evenly;
+}
+
+.flexjc {
+    justify-content: center;
+}
+
+.flexspb {
+    justify-content: space-between;
+}
+
+.flexspa {
+    justify-content: space-around;
+}
+
+.flexw {
+    justify-content: left;
+}
+
+/*-----------Gestion flex------fin---*/
+
+body{
+  
+}
