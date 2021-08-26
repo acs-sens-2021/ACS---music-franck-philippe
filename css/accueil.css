@@ -47,8 +47,14 @@
 /*-----------Gestion flex------fin---*/
 
 body{
-  height:100vh;
-  
+ background-image: url(../img/jessica_lewisplus.jpg);
+  height: 100vh;
+}
+
+h1{
+    color:white;
+    font-size: 2rem;
+    text-align: center;
 }
 
 main{
