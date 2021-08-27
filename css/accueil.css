@@ -55,10 +55,17 @@ h1{
     color:white;
     font-size: 2rem;
     text-align: center;
+    text-align:center;
 }
 
 main{
-    top:50%;
-    transform:translateY(25%);
-    width:100px;
+    height: 100vh;
+    background-color: rgb(228, 15, 15);
+    
+}
+ 
+.deuxelemsearch{
+    display:flex;
+    justify-content: space-between;
+
 }

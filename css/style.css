@@ -55,4 +55,15 @@ main{
     top:50%;
     transform:translateY(25%);
     width:100px;
+    background-color: rgb(228, 15, 15);
+    
+}
+ 
+h1{
+    text-align:center;
+}
+.deuxelemsearch{
+    display:flex;
+    justify-content: space-between;
+
 }
