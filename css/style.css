@@ -52,18 +52,22 @@ body{
 }
 
 main{
-    top:50%;
-    transform:translateY(25%);
-    width:100px;
-    background-color: rgb(228, 15, 15);
+    
+    display : flex;
+    flex-direction:column;
     
 }
  
 h1{
     text-align:center;
 }
-.deuxelemsearch{
-    display:flex;
-    justify-content: space-between;
 
+.btnandco{
+    margin: 20px;
+    width: 100px;
+    background-color: rgb(19, 202, 235);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: black 1px 1px 10px;
+    
 }
