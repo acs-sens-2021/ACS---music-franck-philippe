@@ -40,32 +40,44 @@
     justify-content: space-around;
 }
 
-.flexw {
+.flexlf {
     justify-content: left;
 }
 
 /*-----------Gestion flex------fin---*/
 
-body{
- background-image: url(./img/jessica_lewisplus.jpg);
-  height: 100vh;
+body {
+    background-image: url(./img/jessica_lewisplus.jpg);
+    height: 100vh;
 }
 
-h1{
-    color:white;
+h1 {
+    margin: 30px;
     font-size: 2rem;
     text-align: center;
-    text-align:center;
+    justify-self: center;
+
 }
 
-main{
+main {
     height: 100vh;
-    background-color: rgb(228, 15, 15);
-    
+    /* background-color: rgb(13, 231, 32); */
 }
- 
-.deuxelemsearch{
-    display:flex;
+
+label {
+    margin: 20px;
+}
+
+.deuxelemsearch {
+    display: flex;
     justify-content: space-between;
 
+}
+
+.btn {
+    margin: 0 20px;
+}
+
+.btn-titre {
+    width: 300px;
 }
