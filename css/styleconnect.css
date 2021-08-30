@@ -1,0 +1,11 @@
+#connect {
+    background-image: url("../img/fond.jpg");
+    background-size: cover;
+    text-align: center;
+}
+
+#inscrit {
+    background-image: url(../img/fond2.jpg);
+    background-size: cover;
+    text-align: center;
+}
