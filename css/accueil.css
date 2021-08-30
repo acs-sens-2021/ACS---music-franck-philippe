@@ -56,12 +56,11 @@ h1 {
     font-size: 2rem;
     text-align: center;
     justify-self: center;
-
 }
 
 main {
     height: 100vh;
-    /* background-color: rgb(13, 231, 32); */
+    background: url(../img/jessica_lewisplus.jpg);
 }
 
 label {
@@ -71,7 +70,6 @@ label {
 .deuxelemsearch {
     display: flex;
     justify-content: space-between;
-
 }
 
 .btn {
@@ -82,18 +80,54 @@ label {
     width: 300px;
 }
 
-.defil_h{
-    display:flex;
-    justify-content:space-between;
+.defil_h {
+    display: flex;
+    justify-content: space-between;
     animation: slidein 8s infinite linear alternate;
 }
 
-.slide{
+.slide {
     border: white solid 2px;
 }
 
+.img_slide {
+    vertical-align: middle;
+}
+
+.img_slidex {
+    vertical-align: middle;
+    width:85px;
+}
+
 @keyframes slidein {
-    0%{transform : translatex(0px);}
-    99%{transform : translatex(1000px);}
-    100%{transform : translatex(0px);}
+    0% {
+        transform: translatex(0px);
+    }
+
+    100% {
+        transform: translatex(860px);
+    }
+}
+
+.form_search {
+    margin: 20px;
+}
+
+label {
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.grill{
+    margin: 10px;
+    display: grid;
+grid-template-columns:  1fr 1fr 1fr 1fr;
+border: white solid 1px;
+}
+
+nav{
+position: absolute;
+bottom:0;
+
 }
