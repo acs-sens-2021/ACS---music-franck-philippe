@@ -96,7 +96,7 @@ label {
 
 .img_slidex {
     vertical-align: middle;
-    width:85px;
+    width: 85px;
 }
 
 @keyframes slidein {
@@ -119,15 +119,28 @@ label {
     font-size: 2rem;
 }
 
-.grill{
+.grill {
     margin: 10px;
     display: grid;
-grid-template-columns:  1fr 1fr 1fr 1fr;
-border: white solid 1px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border: white solid 1px;
+    overflow: hidden;
 }
 
-nav{
-position: absolute;
-bottom:0;
+nav {
+    position: relative;
+    display: flex;
+}
 
+li a {
+     text-decoration: none;
+}
+
+img.img_nav {
+    width: 50px;
+    margin: 5px 5px;
+}
+
+ul{
+    list-style-type: none;
 }
