@@ -71,3 +71,7 @@ h1{
     box-shadow: black 1px 1px 10px;
     
 }
+
+.btnandco{
+    cursor:pointer;
+}

@@ -52,7 +52,7 @@ body {
 }
 
 h1 {
-    margin: 30px;
+    margin: 10px;
     font-size: 2rem;
     text-align: center;
     justify-self: center;
@@ -65,7 +65,7 @@ main {
 }
 
 label {
-    margin: 20px;
+    margin: 10px;
 }
 
 .deuxelemsearch {
