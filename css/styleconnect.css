@@ -1,11 +1,38 @@
+body {
+    height: 100vh;
+    margin: 0;
+}
+
 #connect {
     background-image: url("../img/fond.jpg");
     background-size: cover;
     text-align: center;
+
+
+
+
 }
 
 #inscrit {
     background-image: url(../img/fond2.jpg);
     background-size: cover;
     text-align: center;
+    margin-top: -21px;
+}
+
+#text {
+    margin-top: -21px;
+}
+
+h1 {
+    color: turquoise;
+    font-size: 1.8rem;
+    text-shadow: black 0 0 5px;
+}
+
+p {
+    color: white;
+    font-size: 1.8rem;
+    text-shadow: red 0 0 5px;
+
 }
