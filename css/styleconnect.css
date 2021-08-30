@@ -6,11 +6,11 @@ body {
 #connect {
     background-image: url("../img/fond.jpg");
     background-size: cover;
-    text-align: center;
+    text-align: center
 
-
-
-
+}
+.casque{
+    filter: drop-shadow( 1px 1px  1px#fff);
 }
 
 #inscrit {
@@ -35,4 +35,9 @@ p {
     font-size: 1.8rem;
     text-shadow: red 0 0 5px;
 
+}
+#logo1{
+    position: absolute;
+    left:5px;
+    top:5px;
 }
