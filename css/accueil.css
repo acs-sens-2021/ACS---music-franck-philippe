@@ -49,24 +49,33 @@
 body {
     background-image: url(./img/jessica_lewisplus.jpg);
     height: 100vh;
+    
+}
+
+header{
+    background: url(../img/jessica_lewisplus.jpg);
 }
 
 h1 {
-    margin: 10px;
+    /* margin: 10px; */
     font-size: 2rem;
     text-align: center;
     justify-self: center;
+    line-height: 10px;
+    color:white;
 }
 
 main {
-    height: 100vh;
+    height: 80vh;
     background: url(../img/jessica_lewisplus.jpg);
 }
 
 label {
     margin: 10px;
 }
-
+input{
+    font-size: 1.5rem;;
+}
 .deuxelemsearch {
     display: flex;
     justify-content: space-between;
@@ -130,6 +139,7 @@ label {
 nav {
     position: relative;
     display: flex;
+    background-color: grey;
 }
 
 li a {
@@ -137,10 +147,13 @@ li a {
 }
 
 img.img_nav {
-    width: 50px;
+    width: 40px;
     margin: 5px 5px;
+    filter: drop-shadow(white 2px 2px 3px);
 }
 
 ul{
     list-style-type: none;
+    width:100%;
 }
+
