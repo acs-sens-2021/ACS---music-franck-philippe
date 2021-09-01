@@ -7,7 +7,7 @@ console.log("mon bouton", bouton);
 let champsmail = document.querySelector("#inp_mail");
 console.log("input mail",champsmail.value );
 
-let regex = new RegExp("/\\S+@\\S+\\.\\S+/");
+let regex = new RegExp("\\S+@\\S+\\.\\S+");
 
 let champspass = document.querySelector("#inp_pass");
 console.log("input pass",champspass.value );
