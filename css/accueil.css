@@ -89,7 +89,7 @@ input{
     width: 300px;
 }
 
-.defil_h {
+.defill_h {
     display: flex;
     justify-content: space-between;
     animation: slidein 8s infinite linear alternate;
