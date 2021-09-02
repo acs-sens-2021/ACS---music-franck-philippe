@@ -21,7 +21,22 @@ function checkpass(){
         bouton.removeAttribute("disabled");
     }}
     
-
+    let data = {
+        username: `${champsmail.value}`,
+        password: `${champspass}`
+    }
+    fetch('http://musics.logikstik.odns.fr/api/login', {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8'
+            }
+        })
+        .then((response) => response.json())
+    
+        .then((json) => {
+            sessionStorage.brouettetouk = json.token;
+        });
 
 
 
