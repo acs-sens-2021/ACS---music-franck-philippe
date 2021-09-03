@@ -93,7 +93,6 @@ input{
     display: flex;
     justify-content: space-between;
     animation: slidein 15s infinite linear alternate;
-border : pink solid 1px;
 overflow: hidden;
 }
 
@@ -103,7 +102,6 @@ overflow: hidden;
 
 .img_slide {
     vertical-align: middle;
-    border: yellow solid 2px;
     transition : 2s;
 }
 
@@ -137,7 +135,6 @@ label {
     margin: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    border: white solid 1px;
     overflow: hidden;
 }
 

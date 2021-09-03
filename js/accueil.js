@@ -4,7 +4,8 @@ let token = sessionStorage.brouettetouk;
 let voirvingt;
 let voirhuit;
 let count = 0;
-
+let lienalbum = document.querySelector(".clickalbum");
+console.log("lien a",lienalbum);
 console.log("mon token est : ", token);
 
 fetch(`http://musics.logikstik.odns.fr/api/albums/?order[created_at]=desc`, {
@@ -20,7 +21,7 @@ fetch(`http://musics.logikstik.odns.fr/api/albums/?order[created_at]=desc`, {
 
     .then((json) => {
         voirvingt = json;
-        // console.log("les albums ", voirvingt);
+        console.log("les albums ", voirvingt);
         for (count = 0; count < 20; count++) {
             // console.log("count value ", count);
             let tableaujacket = voirvingt[count].picture;
@@ -54,15 +55,15 @@ fetch(`http://musics.logikstik.odns.fr/api/albums/?order[created_at]=desc`, {
 
     .then((json) => {
         voirhuit = json;
-        console.log("les albums ", voirhuit);
+        console.log("les huit ", voirhuit);
         for (count = 0; count < 8; count++) {
-            console.log("count value ", count);
+            // console.log("count value ", count);
             let tableaujacket2 = voirhuit[count].picture;
-            console.log("tab2 ",tableaujacket2);
+            // console.log("tab2 ",tableaujacket2);
             // console.log("picture : ", tableaujacket[count]);
             let jackette2 = document.querySelector(".templategrill");
             let defiler2= document.querySelector(".grill");
-console.log("defiler2 :",defiler2);
+// console.log("defiler2 :",defiler2);
             const clone = document.importNode(jackette2.content, true);
             // console.log("essai jack ", clone);
             // const divslide = clone.querySelector(".slide");
