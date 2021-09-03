@@ -31,7 +31,7 @@ document.querySelector("button").addEventListener("click", function (){
         
         .then((json) => {
             sessionStorage.brouettetouk = json.token;
-            
+            localStorage.brouettetouk = json.token;
             window.location = "../accueil.html";
         });
     }

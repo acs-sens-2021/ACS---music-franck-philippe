@@ -92,20 +92,24 @@ input{
 .defill_h {
     display: flex;
     justify-content: space-between;
-    animation: slidein 8s infinite linear alternate;
+    animation: slidein 15s infinite linear alternate;
+border : pink solid 1px;
+overflow: hidden;
 }
 
 .slide {
-    border: white solid 2px;
+    /* border: white solid 2px; */
 }
 
 .img_slide {
     vertical-align: middle;
+    border: yellow solid 2px;
+    transition : 2s;
 }
 
 .img_slidex {
     vertical-align: middle;
-    width: 85px;
+    width: 70px;
 }
 
 @keyframes slidein {
@@ -114,7 +118,7 @@ input{
     }
 
     100% {
-        transform: translatex(860px);
+        transform: translatex(4240px);
     }
 }
 
