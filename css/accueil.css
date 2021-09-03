@@ -97,9 +97,9 @@ border : pink solid 1px;
 overflow: hidden;
 }
 
-.slide {
-    /* border: white solid 2px; */
-}
+/* .slide {
+    /* border: white solid 2px; 
+} */
 
 .img_slide {
     vertical-align: middle;
@@ -109,16 +109,17 @@ overflow: hidden;
 
 .img_slidex {
     vertical-align: middle;
-    width: 70px;
+    width:105px;
+    
 }
 
 @keyframes slidein {
     0% {
-        transform: translatex(0px);
+        transform: translatex(900px);
     }
 
     100% {
-        transform: translatex(4240px);
+        transform: translatex(-900px);
     }
 }
 
