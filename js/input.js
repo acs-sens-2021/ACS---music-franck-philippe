@@ -4,25 +4,26 @@ let regex = new RegExp("\\S+@\\S+\\.\\S+");
 let champspass = document.querySelector("#inp_pass");
 let mailmail = champsmail.value;
 champsmail.addEventListener("input", checkpass);
-let toutinpok = 0  ;
+let nameuser = document.querySelector("#inp_name");
+let toutinputok = 0;
 function checkpass(){
     if (regex.test(champsmail.value)) {
-       
+        
         // active button
-        bouton.removeAttribute("disabled");
-        toutinpok++;
-        console.log("mail ok ?: ",toutinpok);
+        // toutinpok++;
+        // bouton.removeAttribute("disabled");
     }
 //verif du pass
 }
 
 document.querySelector("button").addEventListener("click", function (){
     let data = {
+        name : nameuser.value,
         username: champsmail.value,
         password: champspass.value
     }
-    
-    fetch('http://musics.logikstik.odns.fr/api/login', {
+    console.log("data ",data);
+    fetch('http://musics.logikstik.odns.fr/api/users', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
@@ -32,9 +33,8 @@ document.querySelector("button").addEventListener("click", function (){
         .then((response) => response.json())
         
         .then((json) => {
-            sessionStorage.brouettetouk = json.token;
-            console.log("le token est : ", json.token);
-            window.location = "../accueil.html";
+            
+            window.location = "../connect.html";
         });
     }
     )

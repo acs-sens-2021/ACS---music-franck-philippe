@@ -4,8 +4,8 @@ let token = sessionStorage.brouettetouk;
 let voirvingt;
 let voirhuit;
 let count = 0;
-let lienalbum = document.querySelector(".clickalbum");
-console.log("lien a",lienalbum);
+let lienalbum = document.querySelector("#clickalbum");
+// console.log("lien a ",lienalbum);
 console.log("mon token est : ", token);
 
 fetch(`http://musics.logikstik.odns.fr/api/albums/?order[created_at]=desc`, {
@@ -25,6 +25,8 @@ fetch(`http://musics.logikstik.odns.fr/api/albums/?order[created_at]=desc`, {
         for (count = 0; count < 20; count++) {
             // console.log("count value ", count);
             let tableaujacket = voirvingt[count].picture;
+            let identite = voirvingt[count].id;
+            console.log("ident ",identite);
             // console.log("picture : ", tableaujacket[count]);
             let jackette = document.querySelector(".templatefill_h");
             let defiler = document.querySelector(".defill_h");
@@ -34,8 +36,11 @@ fetch(`http://musics.logikstik.odns.fr/api/albums/?order[created_at]=desc`, {
             // const divslide = clone.querySelector(".slide");
             // console.log("slide ", divslide);
             const imagejackette = clone.querySelector(".img_slide");
+      
             // console.log("image jackou ", imagejackette);
             imagejackette.src = tableaujacket;
+          
+            
             // console.log("numero image ",imagejackette);
             // console.log("imagejackette", imagejackette);
             defiler.appendChild(clone);
