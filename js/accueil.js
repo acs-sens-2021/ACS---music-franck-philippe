@@ -1,6 +1,8 @@
 
 //*************----------***********----------**** */
 let token = sessionStorage.brouettetouk;
+let baliseA = document.querySelector("a");
+console.log("balise A ", baliseA);
 let voirvingt;
 let voirhuit;
 let count = 0;
@@ -29,6 +31,8 @@ fetch(`http://musics.logikstik.odns.fr/api/albums/?order[created_at]=desc`, {
             console.log("ident ",identite);
             // console.log("picture : ", tableaujacket[count]);
             let jackette = document.querySelector(".templatefill_h");
+            let identitejackette = voirvingt[count].id;
+            console.log("id jackette",  identitejackette);
             let defiler = document.querySelector(".defill_h");
 
             const clone = document.importNode(jackette.content, true);
