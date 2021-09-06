@@ -1,41 +1,43 @@
 
 //*************----------***********----------**** */
 let token = sessionStorage.brouettetouk;
-let baliseA = document.querySelector("a");
-console.log("balise A ", baliseA);
 let voirvingt;
 let voirhuit;
 let count = 0;
-let lienalbum = document.querySelector("#clickalbum");
+// let lienalbum = document.querySelector("#clickalbum");
 // console.log("lien a ",lienalbum);
-console.log("mon token est : ", token);
+// console.log("mon token est : ", token);
 
 fetch(`http://musics.logikstik.odns.fr/api/albums/?order[created_at]=desc`, {
-        method: 'GET',
+    method: 'GET',
+    
+    headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+        'Authorization': `Bearer ${token}`
+    }
+    
+})
+.then((response) => response.json())
 
-        headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-            'Authorization': `Bearer ${token}`
-        }
+.then((json) => {
+    voirvingt = json;
+    // console.log("les albums ", voirvingt);
+    for (count = 0; count < 20; count++) {
+        // console.log("count value ", count);
+        let tableaujacket = voirvingt[count].picture;
+        let identite = voirvingt[count].id;
+        // console.log("ident ",identite);
+        // console.log("picture : ", tableaujacket[count]);
+        let jackette = document.querySelector(".templatefill_h");
+        let identitejackette = voirvingt[count].id;
+        console.log("id jackette",  identitejackette);
+        let defiler = document.querySelector(".defill_h");
+        
+        const clone = document.importNode(jackette.content, true);
+        let baliseA = clone.querySelector(".jackettecliquable");
+        baliseA.href = "details.html?id="+ identitejackette;
+        console.log("balise A ", baliseA);
 
-    })
-    .then((response) => response.json())
-
-    .then((json) => {
-        voirvingt = json;
-        console.log("les albums ", voirvingt);
-        for (count = 0; count < 20; count++) {
-            // console.log("count value ", count);
-            let tableaujacket = voirvingt[count].picture;
-            let identite = voirvingt[count].id;
-            console.log("ident ",identite);
-            // console.log("picture : ", tableaujacket[count]);
-            let jackette = document.querySelector(".templatefill_h");
-            let identitejackette = voirvingt[count].id;
-            console.log("id jackette",  identitejackette);
-            let defiler = document.querySelector(".defill_h");
-
-            const clone = document.importNode(jackette.content, true);
             // console.log("essai jack ", clone);
             // const divslide = clone.querySelector(".slide");
             // console.log("slide ", divslide);
