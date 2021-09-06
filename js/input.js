@@ -1,11 +1,12 @@
-let bouton = document.querySelector("button");
+let toutinputok = 0;
+let nameuser = document.querySelector("#inp_name");
 let champsmail = document.querySelector("#inp_mail");
-let regex = new RegExp("\\S+@\\S+\\.\\S+");
 let champspass = document.querySelector("#inp_pass");
+
+let bouton = document.querySelector("button");
+let regex = new RegExp("\\S+@\\S+\\.\\S+");
 let mailmail = champsmail.value;
 champsmail.addEventListener("input", checkpass);
-let nameuser = document.querySelector("#inp_name");
-let toutinputok = 0;
 function checkpass(){
     if (regex.test(champsmail.value)) {
         
@@ -19,9 +20,10 @@ function checkpass(){
 document.querySelector("button").addEventListener("click", function (){
     let data = {
         name : nameuser.value,
-        username: champsmail.value,
+        email: champsmail.value,
         password: champspass.value
     }
+    
     console.log("data ",data);
     fetch('http://musics.logikstik.odns.fr/api/users', {
         method: 'POST',
