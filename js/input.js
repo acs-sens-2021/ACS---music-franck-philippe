@@ -19,7 +19,7 @@ function checkpass(){
 document.querySelector("button").addEventListener("click", function (){
     let data = {
         name : nameuser.value,
-        username: champsmail.value,
+        email: champsmail.value,
         password: champspass.value
     }
     console.log("data ",data);
