@@ -1,3 +1,6 @@
-let recupeid = window.location;
+let url = window.location.href;
 
-console.log("id recuperer", recupeid);
+let gg = url.substring(url.lastIndexOf('=') + 1);
+
+console.log("id recuperer 1", gg);
+
