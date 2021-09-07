@@ -49,10 +49,10 @@
 body {
     background-image: url(../img/jessica_lewisplus.jpg);
     height: 100vh;
-    
+
 }
 
-header{
+header {
     background: url(../img/jessica_lewisplus.jpg);
 }
 
@@ -62,7 +62,7 @@ h1 {
     text-align: center;
     justify-self: center;
     line-height: 10px;
-    color:white;
+    color: white;
 }
 
 main {
@@ -73,9 +73,12 @@ main {
 label {
     margin: 10px;
 }
-input{
-    font-size: 1.5rem;;
+
+input {
+    font-size: 1.5rem;
+    ;
 }
+
 .deuxelemsearch {
     display: flex;
     justify-content: space-between;
@@ -93,22 +96,28 @@ input{
     display: flex;
     justify-content: space-between;
     animation: slidein 15s infinite linear alternate;
-overflow: hidden;
+    overflow: hidden;
 }
 
-/* .slide {
-    /* border: white solid 2px; 
-} */
+.slide {
+    border: white solid 3px;
+    box-shadow: white 0 0 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
 
 .img_slide {
     vertical-align: middle;
-    transition : 2s;
+    transition: 2s;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .img_slidex {
     vertical-align: middle;
-    width:105px;
-    
+    width: 105px;
+
 }
 
 @keyframes slidein {
@@ -138,6 +147,7 @@ label {
     overflow: hidden;
 }
 
+
 nav {
     position: relative;
     display: flex;
@@ -145,7 +155,7 @@ nav {
 }
 
 li a {
-     text-decoration: none;
+    text-decoration: none;
 }
 
 img.img_nav {
@@ -154,8 +164,7 @@ img.img_nav {
     filter: drop-shadow(white 2px 2px 3px);
 }
 
-ul{
+ul {
     list-style-type: none;
-    width:100%;
+    width: 100%;
 }
-

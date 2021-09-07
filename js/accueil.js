@@ -15,18 +15,19 @@ fetch(`http://musics.logikstik.odns.fr/api/albums/?order[created_at]=desc`, {
         voirvingt = json;
         for (count = 0; count < 20; count++) {
             let tableaujacket = voirvingt[count].picture;
-            let identite = voirvingt[count].id;
+
             let jackette = document.querySelector(".templatefill_h");
             let identitejackette = voirvingt[count].id;
-            console.log("id jackette", identitejackette);
+            // console.log("id jackette", identitejackette);
             let defiler = document.querySelector(".defill_h");
             const clone = document.importNode(jackette.content, true);
             let baliseA = clone.querySelector(".jackettecliquable");
             baliseA.href = "details.html?id=" + identitejackette;
-            console.log("balise A ", baliseA);
+            // console.log("balise A ", baliseA);
             const imagejackette = clone.querySelector(".img_slide");
             imagejackette.src = tableaujacket;
             defiler.appendChild(clone);
+            
         }
     });
 fetch(`http://musics.logikstik.odns.fr/api/albums/?order=recently_played`, {
