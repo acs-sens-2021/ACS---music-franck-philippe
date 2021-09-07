@@ -1,66 +1,40 @@
-
-//*************----------***********----------**** */
 let token = sessionStorage.brouettetouk;
 let voirvingt;
 let voirhuit;
 let count = 0;
-// let lienalbum = document.querySelector("#clickalbum");
-// console.log("lien a ",lienalbum);
-// console.log("mon token est : ", token);
 
 fetch(`http://musics.logikstik.odns.fr/api/albums/?order[created_at]=desc`, {
-    method: 'GET',
-    
-    headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-        'Authorization': `Bearer ${token}`
-    }
-    
-})
-.then((response) => response.json())
-
-.then((json) => {
-    voirvingt = json;
-    // console.log("les albums ", voirvingt);
-    for (count = 0; count < 20; count++) {
-        // console.log("count value ", count);
-        let tableaujacket = voirvingt[count].picture;
-        let identite = voirvingt[count].id;
-        // console.log("ident ",identite);
-        // console.log("picture : ", tableaujacket[count]);
-        let jackette = document.querySelector(".templatefill_h");
-        let identitejackette = voirvingt[count].id;
-        console.log("id jackette",  identitejackette);
-        let defiler = document.querySelector(".defill_h");
-        
-        const clone = document.importNode(jackette.content, true);
-        let baliseA = clone.querySelector(".jackettecliquable");
-        baliseA.href = "details.html?id="+ identitejackette;
-        console.log("balise A ", baliseA);
-
-            // console.log("essai jack ", clone);
-            // const divslide = clone.querySelector(".slide");
-            // console.log("slide ", divslide);
-            const imagejackette = clone.querySelector(".img_slide");
-      
-            // console.log("image jackou ", imagejackette);
-            imagejackette.src = tableaujacket;
-          
-            
-            // console.log("numero image ",imagejackette);
-            // console.log("imagejackette", imagejackette);
-            defiler.appendChild(clone);
-        }
-    });
-
-    fetch(`http://musics.logikstik.odns.fr/api/albums/?order=recently_played`, {
         method: 'GET',
-
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
             'Authorization': `Bearer ${token}`
         }
-
+    })
+    .then((response) => response.json())
+    .then((json) => {
+        voirvingt = json;
+        for (count = 0; count < 20; count++) {
+            let tableaujacket = voirvingt[count].picture;
+            let identite = voirvingt[count].id;
+            let jackette = document.querySelector(".templatefill_h");
+            let identitejackette = voirvingt[count].id;
+            console.log("id jackette", identitejackette);
+            let defiler = document.querySelector(".defill_h");
+            const clone = document.importNode(jackette.content, true);
+            let baliseA = clone.querySelector(".jackettecliquable");
+            baliseA.href = "details.html?id=" + identitejackette;
+            console.log("balise A ", baliseA);
+            const imagejackette = clone.querySelector(".img_slide");
+            imagejackette.src = tableaujacket;
+            defiler.appendChild(clone);
+        }
+    });
+fetch(`http://musics.logikstik.odns.fr/api/albums/?order=recently_played`, {
+        method: 'GET',
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+            'Authorization': `Bearer ${token}`
+        }
     })
     .then((response) => response.json())
 
@@ -73,8 +47,8 @@ fetch(`http://musics.logikstik.odns.fr/api/albums/?order[created_at]=desc`, {
             // console.log("tab2 ",tableaujacket2);
             // console.log("picture : ", tableaujacket[count]);
             let jackette2 = document.querySelector(".templategrill");
-            let defiler2= document.querySelector(".grill");
-// console.log("defiler2 :",defiler2);
+            let defiler2 = document.querySelector(".grill");
+            // console.log("defiler2 :",defiler2);
             const clone = document.importNode(jackette2.content, true);
             // console.log("essai jack ", clone);
             // const divslide = clone.querySelector(".slide");
@@ -87,4 +61,3 @@ fetch(`http://musics.logikstik.odns.fr/api/albums/?order[created_at]=desc`, {
             defiler2.appendChild(clone);
         }
     });
-
