@@ -1,0 +1,57 @@
+
+/*-----------Gestion flex------deb---*/
+
+.flex {
+    display: flex;
+}
+
+.flexdc {
+    flex-direction: column;
+}
+
+.flexac {
+    align-items: center;
+}
+
+.flexspe {
+    justify-content: space-evenly;
+}
+
+.flexjc {
+    justify-content: center;
+}
+
+.flexspb {
+    justify-content: space-between;
+}
+
+.flexspa {
+    justify-content: space-around;
+}
+
+.flexlf {
+    justify-content: left;
+}
+
+/*-----------Gestion flex------fin---*/
+
+nav {
+    position: relative;
+    display: flex;
+    background-color: grey;
+}
+
+li a {
+    text-decoration: none;
+}
+
+img.img_nav {
+    width: 40px;
+    margin: 5px 5px;
+    filter: drop-shadow(white 2px 2px 3px);
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
+}
