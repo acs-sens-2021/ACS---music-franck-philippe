@@ -22,7 +22,13 @@
                 <input id="inp_mail" type="text" name="mailou" required>
                 <label for="Mot de passe">Mot de passe</label>
                 <input id="inp_pass" type="password" name="passou" required>
-
+                <p>Votre mot de passe doit contenir au moins<br>
+                    <span id="minuscule" class="invalid">une minuscule</span>
+                    <span id="majuscule" class="invalid">une majuscule</span>
+                    <span id="chiffre" class="invalid">un chiffre</span>
+                    <span id="special" class="invalid">un caract spécial</span>
+                    <span id="longueur" class="invalid">faire au moins 12 caract</span>
+                </p>
                 <button disabled >connection</button>
 
         </div>
