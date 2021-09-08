@@ -89,38 +89,32 @@ fetch(`${monurl}`, {
                                 .then((json) => {
                                     const clone = document.importNode(zonetrack.content, true);
                                     const spanun = clone.querySelector(".nompiste");
-                                    spanun.textContent = json.name;
+                                    
+                                    let templateorder = document.querySelector(".template_liste");
+                                    console.log("templateorder", templateorder);
+                                    // templateorder.style.order = count;
+                                    spanun.style.order = count;
+
+                                    console.log("count counter ", count);
                                     const spantime = clone.querySelector(".timer");
+                                    if (count < 10) {
+                                        count = " " + count;
+                                    }
+                                    spanun.textContent = `${count} : ${ json.name}`;
                                     let timertoto = json.time;
-                                    let resultat = (Math.floor((timertoto/1000)/60));
-                                    let secondes = Math.floor((timertoto - resultat)/60);
-                                    spantime.textContent = resultat + " : " +(secondes/100).toFixed(0);
+                                    let resultat = (Math.floor((timertoto / 1000) / 60));
+                                    let secondes = Math.floor((timertoto - resultat) / 60);
+                                    spantime.textContent = resultat + ":" + (secondes / 100).toFixed(0);
                                     divinjection.appendChild(clone);
-    
-                                    // divinjection.clone
-    
+
                                 });
 
 
                             // ici fin fetch cherche tracks  *********************
                         }
-                        ///////////////////////////////
-                     
-                        ///////////////////////////////
                     });
-
-
-
                 // ici fin fetch **** tracks albums**********************
-
             });
-
         // ici fin fetch **** nom artist**********************
-
-
-
-
-
-
         // window.location = "../accueil.html";
     });
