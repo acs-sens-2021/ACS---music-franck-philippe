@@ -8,18 +8,17 @@ const product = urlParams.get('id');
 let baliseh1 = document.querySelector("h1");
 // console.log("hhhh ", baliseh1);
 let nomartist = "";
-console.log("productou", product);
+// console.log("productou", product);
 let urlartist = "";
 let monurl = "http://musics.logikstik.odns.fr/api/albums/" + product;
-
 let zonetrack = document.querySelector(".templatetracks");
-console.log("templettou ", zonetrack);
+// console.log("templettou ", zonetrack);
 let divinjection = document.querySelector(".contenu");
-console.log("inject  ", divinjection);
+// console.log("inject  ", divinjection);
 let nompistou = document.querySelector(".nompiste");
-console.log("name pistou ", nompistou);
+// console.log("name pistou ", nompistou);
 let tempspiste = document.querySelector(".timer");
-console.log("temp piste ", tempspiste);
+// console.log("temp piste ", tempspiste);
 
 
 console.log(monurl);
@@ -35,14 +34,14 @@ fetch(`${monurl}`, {
 
     .then((json) => {
 
-        console.log("l'image jackette est : ", json.picture);
+        // console.log("l'image jackette est : ", json.picture);
         balisejackette.src = json.picture;
         nomartist = json.artist;
-        console.log("l'artiste ", nomartist);
+        // console.log("l'artiste ", nomartist);
 
         // ici debut fetch **** nom artist*****************************
         urlartist = `http://musics.logikstik.odns.fr${nomartist}`;
-        console.log("URL >>> nomartist : ", urlartist);
+        // console.log("URL >>> nomartist : ", urlartist);
         fetch(urlartist, {
                 method: 'GET',
                 headers: {
@@ -70,11 +69,11 @@ fetch(`${monurl}`, {
                     })
                     .then((response) => response.json())
                     .then((json) => {
-                        console.log("tracksou ", json.tracks);
+                        // console.log("tracksou ", json.tracks);
                         let voirtracks = json.tracks;
-                        console.log("voi ", voirtracks.length);
+                        // console.log("voi ", voirtracks.length);
                         for (let count = 0; count < voirtracks.length; count++) {
-                            console.log("tracks: " + count + " _piste " + voirtracks[count]);
+                            // console.log("tracks: " + count + " _piste " + voirtracks[count]);
 
                             // ici debut fetch cherche tracks  *********************
                             let nouvelleurl = `http://musics.logikstik.odns.fr${voirtracks[count]}`;
@@ -89,22 +88,23 @@ fetch(`${monurl}`, {
                                 .then((json) => {
                                     const clone = document.importNode(zonetrack.content, true);
                                     const spanun = clone.querySelector(".nompiste");
-                                    
-                                    let templateorder = clone.querySelector(".template_liste");
-                                    console.log("templateorder", templateorder);
-                                   
-                                    templateorder.style.order = count ;
 
-                                    console.log("count counter ", count);
+                                    let templateorder = clone.querySelector(".template_liste");
+                                    templateorder.style.order = count;
                                     const spantime = clone.querySelector(".timer");
                                     if (count < 10) {
                                         count = " " + count;
                                     }
                                     spanun.textContent = `${count} : ${ json.name}`;
                                     let timertoto = json.time;
-                                    let resultat = (Math.floor((timertoto / 1000) / 60));
-                                    let secondes = Math.floor((timertoto - resultat) / 60);
-                                    spantime.textContent = resultat + ":" + (secondes / 100).toFixed(0);
+                                    let minutes = Math.floor(timertoto / 60000);
+                                    let rest = timertoto % 60000;
+                                    console.log("rest ", rest);
+                                    let secondes = Math.floor(rest / 1000);
+                                    if (secondes < 10) {
+                                        secondes = "0" + secondes;
+                                    }
+                                    spantime.textContent = minutes + ":" + secondes;
                                     divinjection.appendChild(clone);
 
                                 });
