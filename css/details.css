@@ -1,9 +1,9 @@
 body{
-    /* display:flex;
+    display:flex;
     flex-direction:column;
     justify-content: center;
     align-items: center; */
-}
+} 
 
 .logo1{
     position: absolute;
@@ -16,16 +16,19 @@ a{
     font-size: 1em;
     color: blue;
     font-weight: bold;
-    text-align: end;
+   
     
 }
 
 .contenu{
     display:flex;
     flex-direction: column;
+    width: 80vw;
 }
 
 .grida{
     display: flex;
+    margin:2px;
     justify-content: space-between;
 }
+
