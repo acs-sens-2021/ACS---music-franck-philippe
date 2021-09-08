@@ -1,8 +1,49 @@
+/*-----------Gestion flex------deb---*/
+
+.flex {
+    display: flex;
+}
+
+.flexdc {
+    flex-direction: column;
+}
+
+.flexac {
+    align-items: center;
+}
+
+.flexspe {
+    justify-content: space-evenly;
+}
+
+.flexjc {
+    justify-content: center;
+}
+
+.flexspb {
+    justify-content: space-between;
+}
+
+.flexspa {
+    justify-content: space-around;
+}
+
+.flexlf {
+    justify-content: left;
+}
+
+/*-----------Gestion flex------fin---*/
+
+
+
+
 body{
     display:flex;
     flex-direction:column;
     justify-content: center;
     align-items: center;
+    /* height: 150vh; */
+    
 } 
 
 .logo1{
@@ -30,5 +71,30 @@ a{
     display: flex;
     margin:2px;
     justify-content: space-between;
+}
+nav {
+    position: fixed;
+    left:0;
+    bottom:0;
+    display: flex;
+    background-color: grey;
+    width:100%;
+    z-index: 100;
+    
+}
+
+li a {
+    text-decoration: none;
+}
+
+img.img_nav {
+    width: 40px;
+    margin: 5px 5px;
+    filter: drop-shadow(white 2px 2px 3px);
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
 }
 
