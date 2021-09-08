@@ -90,10 +90,10 @@ fetch(`${monurl}`, {
                                     const clone = document.importNode(zonetrack.content, true);
                                     const spanun = clone.querySelector(".nompiste");
                                     
-                                    let templateorder = document.querySelector(".template_liste");
+                                    let templateorder = clone.querySelector(".template_liste");
                                     console.log("templateorder", templateorder);
-                                    // templateorder.style.order = count;
-                                    spanun.style.order = count;
+                                   
+                                    templateorder.style.order = count ;
 
                                     console.log("count counter ", count);
                                     const spantime = clone.querySelector(".timer");
