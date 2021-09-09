@@ -37,6 +37,8 @@ document.querySelector("button").addEventListener("click", function () {
             console.log("le token est : ", json.token);
             window.location = "../accueil.html";
         });
+
+        // catch
 })
 
 
