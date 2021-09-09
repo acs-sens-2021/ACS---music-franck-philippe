@@ -4,7 +4,7 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const product = urlParams.get('id');
 
-const template = document.querySelector(".template_ecoute");
+
 
 
 let monurl = `http://musics.logikstik.odns.fr/api/tracks/` + product;
@@ -17,25 +17,16 @@ fetch(monurl, {
     })
     .then((response) => response.json())
     .then((json) => {
-console.log("ici console-log ", json);
-        const clone = document.importNode(template.content, true);
-        const inject = document.querySelector(".injection_ecoute");
+        console.log("ici console-log ", json);
 
-        const clonename = clone.querySelector(".name");
-        const cloneartiste = clone.querySelector(".artiste");
-
-        let image = clone.querySelector("img");
-        image.src = json.picture;
+        
 
 
-
-        clonename.textContent = json.name;
-        // console.log("album ", clonename);
 
         // ----- debut deuxieme fetch
 
 
-        let monurl2 = `http://musics.logikstik.odns.fr/albums/${json.album}`;
+        let monurl2 = `http://musics.logikstik.odns.fr${json.album}`;
         fetch(monurl2, {
                 method: 'GET',
                 headers: {
@@ -45,9 +36,9 @@ console.log("ici console-log ", json);
             })
             .then((response) => response.json())
             .then((json) => {
-                // console.log("artiste: ", json.username);
-                cloneartiste.textContent = json.username;
-                
+
+
+
             })
 
 
@@ -58,5 +49,5 @@ console.log("ici console-log ", json);
         // ----- fin deuxieme fetch
 
 
-        inject.appendChild(clone);
+  
     })
