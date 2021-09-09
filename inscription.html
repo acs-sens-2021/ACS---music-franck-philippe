@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="img/splashscreen2.png" />
-    <script src="js/input.js" defer></script>
-    <link rel="stylesheet" href="css/styleconnect.css">
+    <script src="js/inscriptions.js" defer></script>
+    <!-- <script src="js/input.js" defer></script> -->
+    <link rel="stylesheet" href="css/main.css">
 
     <title>Page d'inscription</title>
 </head>
@@ -15,13 +16,22 @@
     <a id="logo" href="connect.html">
         <img id="logo1"  src="img/ss.png" alt="logo1" width="50"  ></a> 
     </div>
-    <h1>inscription</h1>
-    <p>Nom</p>
-    <input type="text" id="inp_name" required>
-    <p>Adresse e-mail</p>
-    <input type="text" id="inp_mail" required>
-    <p>Mot de passe</p>
-    <input type="password" id="inp_pass" required>
-<button>m'inscrire</button>
+        
+<form class="form_inscription flex flexdc">
+    <h1>Inscription</h1>
+    <label for="name" class="adresse_mail"> Votre Nom :</label>
+    <input type="text" id="inp_name" placeholder="Votre Nom" required>
+    <label for="email" class="adresse_mail">Votre Adresse email :</label>
+    <input type="email" id="inp_mail" placeholder="Votre Email" required>
+    <label for="pass" class="mot_de_passe">Votre Mot de passe :</label>
+    <input type="password" id="inp_pass" name="password" placeholder="Votre mot de passe">
+    <span id="message"></span>
+    <button id="button-register" class="btn_login" type="button">S'inscrire</button>
+    
+    <div class="inscription_login">
+        <p>Vous avez déjà un compte?</p>
+        <p><span><a href="connect.html">Connectez-vous!</a></span></p>
+    </div>
+</form>
 </body>
 </html>
