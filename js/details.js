@@ -20,7 +20,7 @@ let nompistou = document.querySelector(".nompiste");
 let tempspiste = document.querySelector(".timer");
 // console.log("temp piste ", tempspiste);
 console.log(monurl);
-
+// let gridada ="";
 fetch(`${monurl}`, {
         method: 'GET',
         headers: {
@@ -93,6 +93,8 @@ fetch(`${monurl}`, {
                                         secondes = "0" + secondes;
                                     }
                                     spantime.textContent = minutes + ":" + secondes;
+                                    let gridada = clone.querySelector(".grida");
+                                    gridada.href= `./ecoute.html?id=${json.id}`;             
                                     divinjection.appendChild(clone);
                                 });
                             // ici fin fetch cherche tracks  *********************
