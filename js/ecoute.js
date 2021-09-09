@@ -3,12 +3,12 @@ let token = sessionStorage.brouettetouk;
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const product = urlParams.get('id');
-console.log("product", product);
-const template = document.querySelector(".template_ecoute");
-let piste = "";
 
-let monurl = `http://musics.logikstik.odns.fr/api/albums/${product}`;
-fetch(`${monurl}`, {
+const template = document.querySelector(".template_ecoute");
+
+
+let monurl = `http://musics.logikstik.odns.fr/api/tracks/` + product;
+fetch(monurl, {
         method: 'GET',
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
@@ -17,7 +17,7 @@ fetch(`${monurl}`, {
     })
     .then((response) => response.json())
     .then((json) => {
-
+console.log("ici console-log ", json);
         const clone = document.importNode(template.content, true);
         const inject = document.querySelector(".injection_ecoute");
 
@@ -30,13 +30,13 @@ fetch(`${monurl}`, {
 
 
         clonename.textContent = json.name;
-        console.log("album ", clonename);
+        // console.log("album ", clonename);
 
         // ----- debut deuxieme fetch
 
 
-        let monurl2 = `http://musics.logikstik.odns.fr${json.artist}`;
-        fetch(`${monurl2}`, {
+        let monurl2 = `http://musics.logikstik.odns.fr/albums/${json.album}`;
+        fetch(monurl2, {
                 method: 'GET',
                 headers: {
                     'Content-type': 'application/json; charset=UTF-8',
@@ -45,7 +45,7 @@ fetch(`${monurl}`, {
             })
             .then((response) => response.json())
             .then((json) => {
-                console.log("artiste: ", json.username);
+                // console.log("artiste: ", json.username);
                 cloneartiste.textContent = json.username;
                 
             })
