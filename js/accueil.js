@@ -27,7 +27,7 @@ fetch(`http://musics.logikstik.odns.fr/api/albums/?order[created_at]=desc`, {
             const imagejackette = clone.querySelector(".img_slide");
             imagejackette.src = tableaujacket;
             defiler.appendChild(clone);
-            
+
         }
     });
 fetch(`http://musics.logikstik.odns.fr/api/albums/?order=recently_played`, {
@@ -43,22 +43,21 @@ fetch(`http://musics.logikstik.odns.fr/api/albums/?order=recently_played`, {
         voirhuit = json;
         console.log("les huit ", voirhuit);
         for (count = 0; count < 8; count++) {
-            // console.log("count value ", count);
+
             let tableaujacket2 = voirhuit[count].picture;
-            // console.log("tab2 ",tableaujacket2);
-            // console.log("picture : ", tableaujacket[count]);
+            let played = voirhuit[count].id;
+
             let jackette2 = document.querySelector(".templategrill");
             let defiler2 = document.querySelector(".grill");
-            // console.log("defiler2 :",defiler2);
+
+
             const clone = document.importNode(jackette2.content, true);
-            // console.log("essai jack ", clone);
-            // const divslide = clone.querySelector(".slide");
-            // console.log("slide ", divslide);
             const imagejackette = clone.querySelector(".img_slidex2");
-            // console.log("image jackou ", imagejackette);
+            const playedliste = clone.querySelector(".playedcliquable");
+            playedliste.href="details.html?id=" + played ;
+            console.log("playeuuuuudliste", playedliste);
             imagejackette.src = tableaujacket2;
-            // console.log("numero image ",imagejackette);
-            // console.log("imagejackette", imagejackette);
+
             defiler2.appendChild(clone);
         }
     });
