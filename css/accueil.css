@@ -149,7 +149,9 @@ label {
 
 
 nav {
-    position: relative;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
     display: flex;
     background-color: grey;
 }
