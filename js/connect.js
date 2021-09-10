@@ -40,7 +40,61 @@ document.querySelector("button").addEventListener("click", function () {
 
         // catch
 })
+window.onload = () => {
+    document.querySelector("#password").addEventListener("input", checkpass);
 
+}
+
+function checkpass() {
+    let score = 0;
+    let mdp = this.value;
+    let minuscule = document.querySelector("#minuscule");
+    let majuscule = document.querySelector("#majuscule");
+    let chiffre = document.querySelector("#chiffre");
+    let special = document.querySelector("#special");
+    let longueur = document.querySelector("#longueur");
+
+    if (/[a-z]/.test(mdp)) {
+        minuscule.classList.replace("invalid", "valid");
+        score++;
+    } else {
+        minuscule.classList.replace("valid", "invalid");
+    }
+
+    if (/[A-Z]/.test(mdp)) {
+        majuscule.classList.replace("invalid", "valid");
+        score++;
+    } else {
+        majuscule.classList.replace("valid", "invalid");
+    }
+
+    if (/[0-9]/.test(mdp)) {
+        chiffre.classList.replace("invalid", "valid");
+        score++;
+    } else {
+        chiffre.classList.replace("valid", "invalid");
+    }
+
+    if (/[$@!%*#&]/.test(mdp)) {
+        special.classList.replace("invalid", "valid");
+        score++;
+    } else {
+        special.classList.replace("valid", "invalid");
+    }
+
+    if (mdp.length >= 12) {
+        longueur.classList.replace("invalid", "valid");
+    } else {
+        longueur.classList.replace("valid", "invalid");
+    }
+    let hjk = document.querySelector(".btn").style;
+    console.log(hjk);
+    if (score === 5) {
+        document.querySelector(".btn").style.display = "initial";
+    } else {
+        document.querySelector(".btn").style.display = "none";
+    }
+}
 
 
 

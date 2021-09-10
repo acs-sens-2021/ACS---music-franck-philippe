@@ -626,4 +626,11 @@ input {
     height: 600px;
   }
 }
+.valid{
+  color:rgb(34, 235, 16);
+}
+.invalid{
+  color:rgb(255, 0, 0);
+}
+
 /*# sourceMappingURL=main.css.map */
