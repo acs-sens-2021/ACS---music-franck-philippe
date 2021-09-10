@@ -67,3 +67,22 @@ ul {
     height: 80px;
 
 }
+
+
+.btn_lecture{
+    transform: translatex(40px);
+}
+
+.lecteur{
+    /* background-color: rgb(15, 178, 228); */
+    width: 80%;
+    height: 10px;
+    border: black solid 2px;
+ 
+}
+
+.progress{
+    height: 10px;
+    width: 80%;
+    background-color: red;
+}
