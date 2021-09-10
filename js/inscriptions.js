@@ -3,15 +3,17 @@
 let lename = document.querySelector("#inp_name").value;
 let email = document.querySelector("#inp_mail").value;
 let password = document.querySelector("#inp_pass").value;
-let passfocus = document.querySelector("#inp_pass");
+
 let pwd = document.querySelector("#inp_pass");
+pwd.style.border = "2px solid red";
+
 let regex = new RegExp("\\S+@\\S+\\.\\S+");
 pwd.addEventListener("input", function () {
     let saisie = this.value;
-    let message = this.nextElementSibling;
+    // let message = this.nextElementSibling;
     if (saisie.length >= 12 && /[A-Z]/.test(saisie) && /[a-z]/.test(saisie) && /[0-9]/.test(saisie) && /[$@!%*#&]/.test(saisie)) {
-       
-        passfocus.style.border = "color :green";
+       console.log("valid")
+
        
         let bouton = document.querySelector("#button-register");
         bouton.addEventListener("click", function () {
@@ -36,5 +38,5 @@ pwd.addEventListener("input", function () {
                 });
         });
     }  
-
+    pwd.style.border = "2px solid green";
 })
