@@ -72,3 +72,9 @@ button{
      font-weight: 900;
      text-shadow: black 0 0 5px;
  }
+ .valid{
+    color:rgb(34, 235, 16);
+}
+.invalid{
+    color:rgb(255, 0, 0);
+}

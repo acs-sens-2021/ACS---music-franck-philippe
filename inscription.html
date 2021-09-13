@@ -25,7 +25,14 @@
     <input type="email" id="inp_mail" placeholder="Votre Email" required>
     <label for="pass" class="mot_de_passe">Votre Mot de passe :</label>
     <input type="password" id="inp_pass" name="password" placeholder="Votre mot de passe">
-    <span id="message"></span>
+    <p>Votre mot de passe doit contenir au moins<br>
+        <span id="minuscule" class="invalid">une minuscule</span>
+        <span id="majuscule" class="invalid">une majuscule</span>
+        <span id="chiffre" class="invalid">un chiffre</span>
+        <span id="special" class="invalid">un caract spécial</span>
+        <span id="longueur" class="invalid">faire au moins 12 caract</span>
+        <span id="message"></span>
+    </p>
     <button id="button-register" class="btn_login" type="button">S'inscrire</button>
     
     <div class="inscription_login">
