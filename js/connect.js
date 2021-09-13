@@ -41,7 +41,7 @@ document.querySelector("button").addEventListener("click", function () {
         // catch
 })
 window.onload = () => {
-    document.querySelector("#password").addEventListener("input", checkpass);
+    document.querySelector("#inp_pass").addEventListener("input", checkpass);
 
 }
 
@@ -86,13 +86,6 @@ function checkpass() {
         longueur.classList.replace("invalid", "valid");
     } else {
         longueur.classList.replace("valid", "invalid");
-    }
-    let hjk = document.querySelector(".btn").style;
-    console.log(hjk);
-    if (score === 5) {
-        document.querySelector(".btn").style.display = "initial";
-    } else {
-        document.querySelector(".btn").style.display = "none";
     }
 }
 
