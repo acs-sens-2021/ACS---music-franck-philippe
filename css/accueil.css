@@ -61,17 +61,13 @@ h1 {
     font-size: 2rem;
     text-align: center;
     justify-self: center;
-    line-height: 10px;
+    /* line-height: 100px; */
     color: white;
 }
 
 main {
     height: 80vh;
     background: url(../img/jessica_lewisplus.jpg);
-}
-
-label {
-    margin: 10px;
 }
 
 input {
@@ -105,7 +101,6 @@ input {
     margin: 10px;
     border-radius: 10px;
 }
-
 
 .img_slide {
     vertical-align: middle;
@@ -154,6 +149,7 @@ nav {
     display: flex;
     background-color: grey;
     bottom: 0;
+    height:100px;
 }
 
 li a {
@@ -169,4 +165,10 @@ img.img_nav {
 ul {
     list-style-type: none;
     width: 100%;
+    align-items: center;
+}
+
+.logo{
+    position: absolute;
+    filter: drop-shadow(white 2px 2px);
 }
